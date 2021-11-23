@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MyFirstTest {
 
+
     private WebDriver driver;
     private WebDriverWait wait;
 
@@ -20,7 +21,7 @@ public class MyFirstTest {
 
     @Test
     public void myFirstTest() {
-        driver.get("http://www.googlr.com/");
+        driver.get("http://www.google.com/");
     }
 
     @After

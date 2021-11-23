@@ -9,5 +9,8 @@
         <module name="Autotest" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Autotest" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

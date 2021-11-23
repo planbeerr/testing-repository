@@ -8,6 +8,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.edge.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -18,9 +23,12 @@ public class TestingCode {
     private WebDriver driver;
     private WebDriverWait wait;
 
+//    WebDriver chromeDriver = new ChromeDriver();
+//    WebDriver ieDriver = new InternetExplorerDriver();
+//    WebDriver firefoxDriver = new FirefoxDriver();
     @Before
     public void start() {
-        driver = new ChromeDriver();
+        driver = new InternetExplorerDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 10);
     }
