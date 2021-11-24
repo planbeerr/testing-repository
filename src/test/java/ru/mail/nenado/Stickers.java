@@ -37,8 +37,7 @@ public class Stickers {
 
         List<WebElement> stickers = driver.findElements(By.cssSelector("div.image-wrapper"));
         int count = 0;
-        for (int i = 1; i <= 11; i++) {
-//              driver.findElement(By.xpath("(//div[@class='image-wrapper'])[11]")).click();
+        for (int i = 1; i <= stickers.size(); i++) {
             WebElement sticker = driver.findElement(By.xpath("(//div[@class='image-wrapper'])[" + i + "]"));
             sticker.findElement(By.className("sticker"));
         }
