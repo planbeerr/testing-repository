@@ -1,6 +1,7 @@
 package ru.mail.nenado;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -35,11 +36,11 @@ public class Stickers {
     @Test
     public void myFirstTest() {
 
-        List<WebElement> stickers = driver.findElements(By.cssSelector("div.image-wrapper"));
+        List<WebElement> stickers = driver.findElements(By.cssSelector("li.product"));
         int count = 0;
-        for (int i = 1; i <= stickers.size(); i++) {
-            WebElement sticker = driver.findElement(By.xpath("(//div[@class='image-wrapper'])[" + i + "]"));
-            sticker.findElement(By.className("sticker"));
+        for (int i = 0; i < stickers.size(); i++) {
+            int pool = stickers.get(i).findElements(By.cssSelector(".sticker")).size();
+            Assert.assertEquals(1, pool);
         }
     }
 
